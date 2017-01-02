@@ -35,8 +35,7 @@ def get_pie(fruit):
     abort(404)
   json_pie = jsonify(name=pie[0]['name'],
                        ingredients=pie[0]['ingredients'])
-  parsed_pie = json.loads(json_pie)
-  return parsed_pie["name"]
+  return json_pie
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
